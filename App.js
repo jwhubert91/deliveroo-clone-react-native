@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 // screens
 import HomeScreen from "./screens/HomeScreen"
 
+// Pick up later @ 01:09:55 exactly (styling home page) - https://www.youtube.com/watch?v=AkEnidfZnCU
+
 // We are using Nativewind instead of tailwindcss-react-native
 // Docs: https://www.nativewind.dev
 
@@ -21,12 +23,3 @@ export default function App() {
     </NavigationContainer>
   )
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-// })

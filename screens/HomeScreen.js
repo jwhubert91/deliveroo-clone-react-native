@@ -22,8 +22,6 @@ import {
   AdjustmentsHorizontalIcon,
 } from "react-native-heroicons/outline"
 
-// Pick up later @ 00:30:00 exactly (styling home page) - https://www.youtube.com/watch?v=AkEnidfZnCU
-
 const HomeScreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(() => {
