@@ -1,6 +1,17 @@
-import { View, Text, Image, SafeAreaView, TextInput } from "react-native"
+import {
+  View,
+  Text,
+  Image,
+  SafeAreaView,
+  TextInput,
+  ScrollView,
+} from "react-native"
 import React, { useLayoutEffect } from "react"
 import { useNavigation } from "@react-navigation/native"
+
+// components
+import Categories from "../components/Categories"
+import FeaturedRow from "../components/FeaturedRow"
 
 // assets
 import FoodIcon from "../assets/burger-icon.png"
@@ -22,8 +33,8 @@ const HomeScreen = () => {
   }, [])
   return (
     <SafeAreaView className="bg-white">
-      {/* homescreen */}
-      <View className="flex-row pb-3 items-center mx-4 space-x-2 px-4">
+      {/* HEADER */}
+      <View className="flex-row pb-3 items-center mx-4 space-x-2">
         <Image source={FoodIcon} className="h-7 w-7 p-4 rounded-full" />
         <View className="flex-1">
           <Text className="font-bold text-gray-400 text-xs">Deliver Now!</Text>
@@ -45,6 +56,27 @@ const HomeScreen = () => {
         </View>
         <AdjustmentsHorizontalIcon color="#00CCBB" />
       </View>
+      {/* BODY */}
+      <ScrollView className="bg-gray-100">
+        {/* categories */}
+        <Categories />
+        {/* featured rows */}
+        <FeaturedRow
+          title="Featured"
+          description="Paid placements from our partners"
+          id="123"
+        />
+        <FeaturedRow
+          title="Tasty Discounts"
+          description="Everyone's been enjoying these juice discounts!"
+          id="456"
+        />
+        <FeaturedRow
+          title="Offers near you!"
+          description="Why not support your local restaurant tonight?"
+          id="789"
+        />
+      </ScrollView>
     </SafeAreaView>
   )
 }
