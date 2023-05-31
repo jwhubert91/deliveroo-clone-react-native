@@ -8,7 +8,7 @@ export default defineConfig({
   name: 'default',
   title: 'react-native-deliveroo-clone',
 
-  projectId: 'znws132h',
+  projectId: 'p50y2faq',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool(), unsplashImageAsset()],
