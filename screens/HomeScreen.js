@@ -51,8 +51,6 @@ const HomeScreen = () => {
       })
   }, [])
 
-  console.log(featuredCategories)
-
   return (
     <SafeAreaView className="bg-white">
       {/* HEADER */}

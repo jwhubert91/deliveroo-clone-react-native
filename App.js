@@ -5,6 +5,8 @@ import { setupURLPolyfill } from "react-native-url-polyfill"
 // screens
 import HomeScreen from "./screens/HomeScreen"
 import RestaurantScreen from "./screens/RestaurantScreen"
+import { Provider } from "react-redux"
+import { store } from "./store"
 
 // Pick up later @ 01:09:55 exactly (styling home page) - https://www.youtube.com/watch?v=AkEnidfZnCU
 
@@ -17,11 +19,13 @@ setupURLPolyfill()
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        {/* Screens go here... */}
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Restaurant" component={RestaurantScreen} />
-      </Stack.Navigator>
+      <Provider store={store}>
+        <Stack.Navigator>
+          {/* Screens go here... */}
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Restaurant" component={RestaurantScreen} />
+        </Stack.Navigator>
+      </Provider>
     </NavigationContainer>
   )
 }
